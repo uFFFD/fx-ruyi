@@ -3,7 +3,7 @@
 // @namespace    https://github.com/uFFFD/fx-ruyi
 // @description  shows how to work with firefox extension "Media Key Support"
 // @author       uFFFD
-// @version      20150301
+// @version      20150418
 // @license      GPLv3+
 // @include      *
 // ==/UserScript==
@@ -16,6 +16,8 @@
 
   let notify = (title, options) => {
     if (title == undefined && options == undefined) {
+      if (notifyTitle == undefined && notifyOptions == undefined)
+        return;
       title = notifyTitle;
       options = notifyOptions;
     }

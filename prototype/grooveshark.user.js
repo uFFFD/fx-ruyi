@@ -20,6 +20,8 @@
 
   let notify = (title, options) => {
     if (title == undefined && options == undefined) {
+      if (notifyTitle == undefined && notifyOptions == undefined)
+        return;
       title = notifyTitle;
       options = notifyOptions;
     }
