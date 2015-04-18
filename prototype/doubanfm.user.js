@@ -3,7 +3,7 @@
 // @namespace    https://github.com/uFFFD/fx-ruyi
 // @description  enable media keys on douban.fm
 // @author       uFFFD
-// @version      20150301
+// @version      20150418
 // @license      GPLv3+
 // @match        http://douban.fm/*
 // ==/UserScript==
@@ -71,7 +71,8 @@
       body: `${song.title} - ${song.artist}
 [ ${song.albumtitle} ] ${song.pubtime}
 ${durationStr(song.len)}`,
-      icon: song.picture
+      icon: song.picture,
+      tag: "doubanfm",
     };
     notify("豆瓣FM Now Playing...", options);
   };

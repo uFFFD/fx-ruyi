@@ -3,7 +3,7 @@
 // @namespace    https://github.com/uFFFD/fx-ruyi
 // @description  enable media keys on grooveshark
 // @author       uFFFD
-// @version      20150301
+// @version      20150418
 // @license      GPLv3+
 // @match        http://grooveshark.com/*
 // @match        http://preview.grooveshark.com/*
@@ -72,7 +72,8 @@
         body: `${song.songName} - ${song.artistName}
 [ ${song.albumName} ]
 ${durationStr(song.calculatedDuration / 1000)}`,
-        icon: song.artURL
+        icon: song.artURL,
+        tag: "grooveshark",
       };
       notify("Grooveshark Now Playing...", options);
     }
